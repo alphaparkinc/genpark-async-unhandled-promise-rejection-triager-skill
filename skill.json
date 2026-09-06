@@ -1,0 +1,36 @@
+{
+  "name": "genpark-async-unhandled-promise-rejection-triager-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Asynchronous control flow auditor identifying unawaited floating promises, missing catch handlers, and race conditions.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "service",
+  "tags": [
+    "async-await",
+    "promise-rejection",
+    "concurrency-audit",
+    "node-js",
+    "code-review"
+  ],
+  "inputs": {
+    "file_path": {
+      "type": "string"
+    },
+    "async_functions_count": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "triage_id": {
+      "type": "string"
+    },
+    "floating_unawaited_promises_found": {
+      "type": "integer"
+    },
+    "concurrency_safety_grade": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
